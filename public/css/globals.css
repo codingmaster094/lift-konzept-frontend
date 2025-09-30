@@ -1,0 +1,345 @@
+@import "tailwindcss";
+/* poppins-400 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2'); 
+}
+
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/poppins-v23-latin-500.woff2') format('woff2'); 
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v23-latin-600.woff2') format('woff2'); 
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/poppins-v23-latin-700.woff2') format('woff2'); 
+}
+
+@theme {
+  /* Colors */
+  --color-primary:#0065A3; 
+  --color-primary_1:#00ADEF80; 
+  --color-primary_light:#F0FAFE; 
+  --color-secondary:#8BC43F; 
+  --color-dark:#011527;  
+  --color-light:#F2FAFF; 
+  --color-border:#00ADEF; /*nav border*/
+
+
+/* spacing */
+  --spacing: 1px;
+  --spacing-space: clamp(3.125rem, 2.2416rem + 4.417vw, 6.25rem);
+
+ /* breakpoints */
+  --breakpoint-*: initial;
+ 
+  --breakpoint-xsm: 450px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xlg: 1024;
+  --breakpoint-2xl: 1100;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1470px;
+ 
+  --container-*: initial;
+ 
+  --container-xsm: 450px;
+  --container-sm: 576px;
+  --container-md: 768px;
+  --container-lg: 992px;
+  --container-xlg: 1024px;
+  --container-2xl: 1100;
+  --container-xl: 1280px;
+  --container-xxl: 1470px;
+
+ /* font-family */
+  --font-poppins: 'Poppins', sans-serif;
+ 
+  /* font-size */
+  --text-h1: clamp(32px, 2vw + 1rem, 40px);
+  --text-h1--line-height: 1.5rem;
+  --text-h1--letter-spacing: 0;
+  --text-h1--font-weight: bold;
+
+  --text-h2: clamp(28px, 2vw + 1rem, 36px);
+  --text-h2--line-height: 1.5rem;
+  --text-h2--letter-spacing: 0;
+  --text-h2--font-weight: bold;
+
+   --text-h3_28: clamp(24px, 1.5vw, 28px);
+  --text-h3_28--letter-spacing: 0;
+
+   --text-h3: clamp(22px, 1.5vw, 24px);
+  --text-h3--line-height: 1.5rem;
+  --text-h3--letter-spacing: 0;
+
+  --text-h4: clamp(18px, 1.5vw, 21px);
+  --text-h4--line-height:1.5rem;
+  --text-h4--letter-spacing: 0;
+ 
+  --text-h5: clamp(18px, 1.5vw, 20px);
+  --text-h5--line-height: 1.5rem;
+  --text-h5--letter-spacing: 0;
+
+  --text-base: clamp(16px, 1.5vw, 18px);
+  --text-base--line-height: 1.5rem;
+  --text-base--letter-spacing: 0;
+}
+
+@layer{
+    .container{
+        @apply mx-auto px-15
+    }
+    body{
+      @apply font-poppins text-dark 
+    }
+.btn-secondary{
+  @apply bg-secondary px-24 py-10 flex justify-center items-center gap-10 
+         w-fit text-base text-white rounded-4xl relative overflow-hidden
+         transition-all duration-500 ease-in-out
+         focus:outline-none font-medium text-center; 
+  
+  @apply before:content-[''] before:absolute before:inset-x-0 before:bottom-0
+         before:h-0 before:bg-primary before:opacity-0 before:transition-all
+         before:duration-500 before:ease-in-out before:z-0;
+
+  @apply hover:before:h-full hover:before:opacity-100
+         focus:before:h-full focus:before:opacity-100
+         active:before:h-full active:before:opacity-100; 
+}
+.btn-link{
+  @apply block relative before:content-[''] before:absolute before:bottom-[-6px] before:left-0 before:w-0 before:h-1 before:bg-white transition-all duration-500 ease-in-out
+         focus:outline-none  before:opacity-0 before:transition-all
+         before:duration-500 before:ease-in-out before:z-0;
+  @apply hover:before:w-full hover:before:opacity-100
+         focus:before:w-full focus:before:opacity-100
+         active:before:w-full active:before:opacity-100;
+}
+
+   nav ul li a{
+    @apply relative text-dark before:content-[''] before:w-0 before:h-3 before:bg-border before:absolute before:-bottom-10 before:left-0 before:rounded-4xl before:opacity-0 before:transition-all before:duration-500 before:ease-in-out hover:before:w-24 hover:before:opacity-100 active:before:w-24 focus:before:w-24 active:before:opacity-100 focus:before:opacity-100;
+   }
+    h1, h2{
+      @apply font-bold
+    }
+    .swiper-logo .swiper{
+      @apply h-120 md:h-auto
+    }
+    .vorteil-slider .swiper{
+      @apply !pt-0 md:!pt-150 mt-0 md:!-mt-100
+    }
+   
+    .vorteil-slider .swiper .swiper-button-prev svg{
+      @apply hidden
+    }
+    .facts-slider .swiper-wrapper{
+      @apply !items-stretch
+    }
+   .swiper-pagination-bullet-active{
+    @apply !bg-primary !w-10 !h-10 rounded-full
+   }
+   .swiper-pagination-bullet{
+    @apply !w-10 !h-10
+   }
+   .foot-link ul li a{
+     @apply relative text-dark before:content-[''] before:w-0 before:h-3 before:bg-border before:absolute before:-bottom-6 before:left-0 before:rounded-4xl before:opacity-0 before:transition-all before:duration-500 before:ease-in-out hover:before:w-24 hover:before:opacity-100 active:before:w-24 focus:before:w-24 active:before:opacity-100 focus:before:opacity-100;
+   }
+}
+.icon-block1{
+  width: 100%;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom:16px;
+ }
+ 
+@media (min-width:768px){
+.icon-block1{
+  width: 50%;
+  border-right: 1px solid #DFDFDF;
+   border-bottom: 1px solid transparent;
+   padding-bottom:0;
+ }
+}
+
+/* blog single page details css */
+/* Hide default clear icon in Chrome/Safari */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.single-text p:not(:last-child)::after {
+    content: '|';
+    margin-left: 15px;
+    line-height: 1;
+    vertical-align: 1px;
+}
+.blog-text-d {
+    display: flex;
+    gap: 8px;
+}
+.page-sec h2, blockquote strong{
+  font-size: var(--text-h2);
+  color: var(--color-primary)
+}
+.page-sec h3{
+  font-size: var(--text-h3);
+}
+.page-sec h4{
+  font-size: var(--text-h4);
+}
+.page-sec h5{
+  font-size: var(--text-h4);
+}
+.page-sec p{
+  font-size: var(--text-base);
+}
+.page-sec h2, .page-sec h3, .page-sec h4, .page-sec h5{ 
+  letter-spacing: 0;
+  padding-bottom: 16px;
+  padding-top:24px;
+}
+ .page-sec h3, .page-sec h4, .page-sec h5{
+  font-weight:600;
+
+}
+.page-default-content ul li, .single-post-content ul li{
+  position: relative;
+  padding-left: 36px;
+   font-size: 18px;
+}
+.page-default-content ul li a, .single-post-content ul li a{
+  color:var(--color-primary);
+}
+.page-default-content ul, .single-post-content ul{
+  list-style: none;
+  padding-left: 0;
+  padding-top:10px;
+  padding-bottom:24px;
+}
+.page-default-content p:not(:last-child), .single-post-content p:not(:last-child){
+  padding-bottom: 16px;
+  line-height: 1.5rem;
+}
+.page-default-content ul li:not(:last-child), .single-post-content ul li:not(:last-child),.page-default-content ol li:not(:last-child), .single-post-content ol li:not(:last-child){
+  padding-bottom: 16px;
+}
+.page-default-content ul li::before, .single-post-content ul li::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 32px;
+  height:32px;
+  background-image: url("/images/right-arrow-li.svg");
+}
+.page-default-content blockquote, .single-post-content blockquote{
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  background-color: #0065A3CC;
+  padding:48px;
+  border-radius: 12px;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:16px;
+  margin-top:48px;
+  margin-bottom:48px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.page-default-content blockquote h2, .single-post-content blockquote h2, blockquote strong{
+  color: #ffffff;
+  text-align:center;
+  font-weight: 700;
+}
+.page-default-content blockquote p, .single-post-content blockquote p{
+  max-width:60%;
+  margin:0 auto;
+}
+.page-default-content ol, .single-post-content ol{
+  list-style: disc;
+  padding-left: 24px;
+  padding-top:10px;
+  padding-bottom:24px;
+}
+.page-default-content ol li, .single-post-content ol li{
+  font-size: 18px;
+}
+.wp-c-block{
+  display:grid;
+  gap:32px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: start;
+  align-items: start;
+}
+.wp-figure{
+  display: grid;
+  gap:24px;
+ grid-template-columns: 1fr 1fr;
+}
+figure img{
+  border-radius: 12px;
+}
+.rank-math-block{
+  margin:24px 0;
+}
+.rank-math-list-item{
+  padding:24px;
+  border-radius: 16px;
+  border:1px solid #01152729;
+}
+.rank-math-list-item:not(:last-child){
+  margin-bottom:16px;
+}
+h3.rank-math-question {
+    font-size: 20px;
+    padding-top: 0;
+}
+ blockquote{
+  text-align: center;
+ }
+ blockquote  a {
+  @apply bg-secondary px-24 py-10 flex justify-center items-center gap-10 
+         w-fit text-base text-white rounded-4xl relative overflow-hidden
+         transition-all duration-500 ease-in-out
+         focus:outline-none font-medium text-center hover:bg-primary; 
+  
+}
+
+@media (max-width:768px){
+  .page-default-content blockquote p, .single-post-content blockquote p{
+    max-width: 100%;
+  }
+  .wp-figure,.wp-c-block{
+    grid-template-columns: 1fr;
+  }
+  .page-default-content blockquote, .single-post-content blockquote{
+    padding:20px;
+  }
+}
