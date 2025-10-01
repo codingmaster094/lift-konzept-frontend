@@ -52,7 +52,7 @@ const SingleBlog = ({ RatgeberData }) => {
                 <div key={i} className="blog-wrap-box">
                   <div className="blog-box-item flex flex-col h-full group">
                     <Link
-                      href={`/trappenlift_ratgeber/${item.slug}`}
+                      href={`/trappenlift-ratgeber/${item.slug}`}
                       className="img-box overflow-hidden rounded-xl relative"
                       aria-roledescription="img Link to blog detail page"
                     >
