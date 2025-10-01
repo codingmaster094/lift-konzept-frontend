@@ -71,7 +71,7 @@ const SingleBlog = ({ RatgeberData }) => {
                     </Link>
                     <div className="content-box mt-16 space-y-16">
                       <Link
-                         href={`/trappenlift_ratgeber/${item.slug}`}
+                         href={`/trappenlift-ratgeber/${item.slug}`}
                         aria-roledescription="title Link to blog detail page"
                       >
                         <h3
@@ -94,7 +94,7 @@ const SingleBlog = ({ RatgeberData }) => {
                           })}
                       </div>
                       <Link
-                         href={`/trappenlift_ratgeber/${item.slug}`}
+                         href={`/trappenlift-ratgeber/${item.slug}`}
                         role="button"
                         aria-label="Weiter zur nächsten Frage"
                         className="inline-flex items-center gap-24 text-primary text-h5"

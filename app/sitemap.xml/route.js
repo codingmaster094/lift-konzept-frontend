@@ -63,7 +63,7 @@ export async function GET() {
       ...(ratgeberData.docs || []).map(
         (item) => `
           <url>
-            <loc>${xmlEscape(baseUrl)}/trappenlift_ratgeber/${xmlEscape(item.slug)}</loc> 
+            <loc>${xmlEscape(baseUrl)}/trappenlift-ratgeber/${xmlEscape(item.slug)}</loc> 
             <lastmod>${new Date(item.updatedAt).toISOString()}</lastmod>
           </url>`
       ),
